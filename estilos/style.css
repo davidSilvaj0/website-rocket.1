@@ -116,10 +116,6 @@ section p{
     line-height: 35px;
 }
 
-img{
-
-}
-
 .verMais{
     text-align: center;
     display: flex;
@@ -134,7 +130,6 @@ img{
 /* ---------------------------------------------------------- */
 
 footer{
-
     background-color: var(--cor01);
     color: var(--cor02);
 
