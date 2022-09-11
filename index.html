@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+</head>
+<body>
+    <header>
+        <h1>Era Espacial</h1>
+        <span id="menuIcon" class="material-symbols-outlined" onclick="openMenu()">
+            arrow_drop_down_circle
+        </span>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Foguetes</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <picture>
+                <source media="(max-width: 768px)" srcset="imagens/shuttle/shuttle-p.jpg" type="image/jpeg">
+                <source media="(max-width: 992px)" srcset="imagens/shuttle/shuttle-m.jpg" type="image/jpeg">
+                <img src="imagens/shuttle/shuttle-g.jpg" alt="Shuttle" style="width:100%">
+            </picture>
+            <div class="box">
+                <h2>Space Shuttle</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio assumenda exercitationem, accusamus veritatis accusantium, quasi distinctio vero dolorum earum impedit ea similique numquam perspiciatis ut enim blanditiis totam! Est, impedit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perferendis repellat nihil vero, voluptatem aperiam sint rerum natus? Beatae aperiam quos corrupti laudantium optio sequi quaerat, dolorem dolores facilis ex rem magni. Dolorem labore consequatur illo atque quibusdam, nisi maxime.
+                </p>
+                <a href="#" class="verMais">
+                    <span class="material-symbols-outlined">
+                        rocket_launch
+                    </span>
+                </a>
+            </div>  
+        </section>
+
+        <section>
+            <picture>
+                <source media="(max-width: 768px)" srcset="imagens/falcon9/falcon-m.jpg" type="image/jpeg">
+                <source media="(max-width: 992px)" srcset="imagens/falcon9/falcon-m.jpg" type="image/jpeg">
+                <img src="imagens/falcon9/falcon-g.jpg" alt="Falcon 9" style="width:100%">
+            </picture>
+            <div class="box">
+                <h2>Falcon 9</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eveniet quibusdam minima architecto doloremque reiciendis debitis aut, assumenda dolorum eius aspernatur vel sit nihil praesentium laudantium veritatis ipsum commodi fugiat similique obcaecati quisquam in, aliquid nulla repellendus. Minus, hic reiciendis possimus quisquam nostrum, asperiores quam accusamus tenetur impedit illum et.</p>
+            </div>
+        </section>
+
+        <section>
+            <picture>
+                <source media="(max-width: 768px)" srcset="imagens/sls/sls-m.jpg" type="image/jpeg">
+                <source media="(max-width: 992px)" srcset="imagens/sls/sls-m.jpg" type="image/jpeg">
+                <img src="imagens/sls/sls-g.jpg" alt="SLS" style="width:100%">
+            </picture>
+
+            <div class="box">
+                <h2>SLS</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate delectus, et nemo tempore ullam ratione! Ipsam, est! Rem sint porro minus? Totam voluptatem optio error repudiandae asperiores ea quas explicabo, sint dolorum rerum minus animi, repellat debitis modi id consequatur quibusdam, eius vel soluta corporis eum eveniet! Cum, laboriosam cupiditate sunt suscipit a impedit? Voluptatum sapiente delectus impedit. Similique, accusamus?</p>
+            </div>
+        </section>
+      <!-- <section>
+    
+            <img src="imagens/soyuz/soyuz-g.jpg" alt="Soyuz">
+            <div class="box">
+                <h2>Soyuz</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, veritatis. Inventore, minima facere accusantium illo optio reprehenderit earum totam ipsum vero facilis neque accusamus esse consectetur, repellendus dolorem sapiente nulla porro est! Omnis quod assumenda consequuntur asperiores quis animi quam doloribus, ipsum libero minima illo blanditiis corporis deserunt laborum reiciendis sed dignissimos ut eaque temporibus totam voluptatibus distinctio? Ex, ab.
+                </p>
+            </div>
+        </section>
+              
+
+
+
+        <section>
+            <img src="imagens/starship/starship-g.jpg" alt="Starship">
+            <div class="box">
+                <h2>Starship</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis dolores beatae quisquam saepe minima neque! Ut unde maiores, reprehenderit dolore mollitia suscipit excepturi nostrum, odit repellendus dicta dolorum voluptas eligendi ducimus saepe aliquid sequi ipsum quisquam dolor inventore quas. Ex, asperiores. Eaque pariatur, odio, temporibus amet reprehenderit ratione ab laboriosam eum ea, soluta odit iure vel vero modi eius cumque.</p>
+            </div>
+        </section>
+
+        <section>
+            <img src="https://imgs.search.brave.com/wIiqh3GH1btuxYpYTXKrpAABpx1pz1cPdp2xp54cSeg/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWdp/eC5idXN0bGUuY29t/L2ludmVyc2UvYTQv/MjUvMmIvODIvN2M4/MC80MDg3Lzk1ZTcv/YWU5MTRkMzYzMzEy/L3RoZS1kZWx0YS00/LWhlYXZ5LXJvY2tl/dC1zZXQtdG8tbGF1/bmNoLW5yb2wtMzct/aW50by1vcmJpdC1y/ZWNlaXZlcy1hLWZp/bmFsLXJvdW5kLW9m/LWluc3BlY3Rpb24u/anBlZz93PTIwMDAm/YXV0bz1mb3JtYXQm/cT03MCZmaXQ9bWF4/JmNyb3A9ZmFjZXM" alt="Delta-IV-Heavy">
+            <div class="box">
+                <h2>Delta-IV-Heavy</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis dolores beatae quisquam saepe minima neque! Ut unde maiores, reprehenderit dolore mollitia suscipit excepturi nostrum, odit repellendus dicta dolorum voluptas eligendi ducimus saepe aliquid sequi ipsum quisquam dolor inventore quas. Ex, asperiores. Eaque pariatur, odio, temporibus amet reprehenderit ratione ab laboriosam eum ea, soluta odit iure vel vero modi eius cumque.</p>
+            </div>
+        </section>
+
+        <section>
+            <img src="https://imgs.search.brave.com/03ftBRCzOYrnTy1ANsENkLfy5coJvL8PYcTt3CHfz5k/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5l/c2EuaW50L3Zhci9l/c2Evc3RvcmFnZS9p/bWFnZXMvZXNhX211/bHRpbWVkaWEvaW1h/Z2VzLzIwMDkvMDcv/YXJpYW5lXzVfZWNh/X3YxODlfbGF1bmNo/ZXJfaXNfcmVhZGll/ZF9mb3JfbGlmdC1v/ZmYvOTYwMjI5Ny0z/LWVuZy1HQi9Bcmlh/bmVfNV9FQ0FfVjE4/OV9sYXVuY2hlcl9p/c19yZWFkaWVkX2Zv/cl9saWZ0LW9mZl9w/aWxsYXJzLmpwZw" alt="Ariane-V">
+            <div class="box">
+                <h2>Ariane-V</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis dolores beatae quisquam saepe minima neque! Ut unde maiores, reprehenderit dolore mollitia suscipit excepturi nostrum, odit repellendus dicta dolorum voluptas eligendi ducimus saepe aliquid sequi ipsum quisquam dolor inventore quas. Ex, asperiores. Eaque pariatur, odio, temporibus amet reprehenderit ratione ab laboriosam eum ea, soluta odit iure vel vero modi eius cumque.</p>
+            </div>
+        </section>
+
+        <section>
+            <img src="https://d3ezn0y6hdgq62.cloudfront.net/assets/photos/new-glenn/blueorigin_newglenn_ascent_web.jpg" alt="New Glenn">
+            <div class="box">
+                <h2>New Glenn</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis dolores beatae quisquam saepe minima neque! Ut unde maiores, reprehenderit dolore mollitia suscipit excepturi nostrum, odit repellendus dicta dolorum voluptas eligendi ducimus saepe aliquid sequi ipsum quisquam dolor inventore quas. Ex, asperiores. Eaque pariatur, odio, temporibus amet reprehenderit ratione ab laboriosam eum ea, soluta odit iure vel vero modi eius cumque.</p>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <p>Site criado por David Silva</p>
+        <span>
+            <a href="https://davidsilvaj0.github.io">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051326.png" alt="GitHub" width="50px" height="50px">
+            </a>
+        </span>
+    </footer>
+
+    <script>
+        function openMenu(){
+            if ( menu.style.display == 'block')
+            {
+                menu.style.display= 'none';
+            }
+            else
+            {menu.style.display= 'block';}
+            
+        }
+    </script>
+</body>
+</html>
