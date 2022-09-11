@@ -92,12 +92,11 @@ body{
 
 main {
     width: 90vw;
-    background-color: rgb(207, 230, 230);
+    background-color: rgba(124, 133, 133, 0.062);;
+    color: var(--cor02);
     margin: auto;
     border-radius: 10px;
 }
-
-
 
 section h2, p {
     padding: 10px;
@@ -117,16 +116,40 @@ section p{
     line-height: 35px;
 }
 
-.verMais{
+.verMais , #menuIcon{
     text-align: center;
     display: flex;
     justify-content: center;
-    color: #080F0F;
+    margin: auto;
+    color: #9aa0a0;
+    max-width: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: .5s;
 }
 
-.verMais:hover{
-    color: #2E382E;
+.verMais , #menuIcon:hover{
+    color: #d6e0d6;
+    transform: scale(1.2);
 }
+
+.material-symbols-outlined {
+    transition: 0.5s;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 100,
+    'GRAD' -25,
+    'opsz' 48
+  }
+
+.material-symbols-outlined:hover {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' -25,
+  'opsz' 48
+}
+
 
 /* ---------------------------------------------------------- */
 
