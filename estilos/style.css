@@ -134,11 +134,17 @@ img{
 /* ---------------------------------------------------------- */
 
 footer{
+    border: 1px solid red;
     background-color: var(--cor01);
     color: var(--cor02);
+
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+
+    font-family: var(--font01);
+    font-size: 1.2em;
+
     padding: 10px;
-    min-height: 200px;
+    min-height: 150px;
 }
