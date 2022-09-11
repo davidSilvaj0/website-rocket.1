@@ -36,13 +36,14 @@ header
     
     background-image: url(../imagens/fundo-menu-oposite.jpg);
 
-    background-position: center ;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     
     padding-top: 40px;
     padding-bottom: 10px;
 }
+
 header > h1{
     font-family: 'Bungee Hairline', cursive;
     font-size: 3.5em;
@@ -91,7 +92,6 @@ body{
 }
 
 main {
-    width: 90vw;
     background-color: rgba(124, 133, 133, 0.062);;
     color: var(--cor02);
     margin: auto;
