@@ -161,6 +161,25 @@ picture > img { width: 100%; }
   'opsz' 48
 }
 
+
+#btnUp {
+    margin: 0px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    opacity: 30%;
+    color: white;
+    scale: 2;
+    background-color: #080F0F;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#btnUp:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+
 hr{
     width: 90vw;
     margin: auto;
