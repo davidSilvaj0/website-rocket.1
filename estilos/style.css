@@ -30,13 +30,14 @@ a{
 
 header
 {
+    position: relative;
     background-color: var(--cor01);
     color: var(--cor02);
     
-    background-image: url(imagens/fundo-menu.jpg);
-    background-position: right center;
+    background-image: url(../imagens/fundo-menu-oposite.jpg);
+
+    background-position: center ;
     background-repeat: no-repeat;
-    
     background-size: cover;
     
     padding-top: 40px;
