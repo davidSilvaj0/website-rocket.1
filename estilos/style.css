@@ -163,15 +163,16 @@ picture > img { width: 100%; }
 
 
 #btnUp {
-    margin: 0px;
     position: fixed;
     right: 15px;
     bottom: 15px;
+    margin: 0px;
+    height: 50px;
+    width: 50px;
     opacity: 30%;
-    color: white;
-    scale: 2;
-    background-color: #080F0F;
     border-radius: 50%;
+    color: rgb(145, 183, 255);
+    background-color: #080F0F;
     transition: .5s;
 }
 
