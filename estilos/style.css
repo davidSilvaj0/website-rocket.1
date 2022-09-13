@@ -54,9 +54,9 @@ header > h1{
 
 #menu {
     display: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--fontTitle), sans-serif;
     font-weight: normal;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 #menu ul {
