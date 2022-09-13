@@ -71,11 +71,26 @@ header > h1{
     font-weight: bold;
     border-radius: 5px;
     transition-duration: 0.5s;
+    position: relative;
 }
 
-#menu li a:hover {
-    background-color: var(--cor04);
-    transition-duration: 0.5s;
+/* Animação underline no menu */
+#menu li a::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor02);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#menu li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 #menuIcon{

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body onresize="onchangeSize()">
     <header>
         <h1>Era Espacial</h1>
         <span id="menuIcon" class="material-symbols-outlined" onclick="openMenu()">
@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Foguetes</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Motores</a></li>
                 <li><a href="#">Sobre</a></li>
             </ul>
         </nav>
@@ -168,6 +168,7 @@
     </footer>
     
     <script>
+        // função para abrir ou fechar o menu (smartphone)
         function openMenu(){
             if ( menu.style.display == 'block')
             {
@@ -179,8 +180,19 @@
             }   
         }
 
-        const buttonUP = document.querySelector("#btnUp");
+        // função para o menu nao desaparecer quando o resize muda
+        function onchangeSize(){
+            if(window.innerWidth>=768){
+                menu.style.display = "block";
+            }
+            
+            else{
+                menu.style.display = "none";
+            }
+        }
 
+        // função do botão de dar scroll para o topo da página
+        const buttonUP = document.querySelector("#btnUp");
         buttonUP.addEventListener("click",function (){
 
 

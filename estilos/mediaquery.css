@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+:root{
+
+    --cor01:#080F0F;
+    --cor02:#EEE5E9;
+    --cor03:#2E382E;
+    --cor04:#153B50;
+
+    --font01: 'Barlow Condensed';
+    --font02: 'Open Sans';
+    --font03: 'Roboto', sans-serif;
+    --fontTitle: 'Bungee Hairline';
+}
+
 @media screen and (min-width:768px) {
     picture > img { width: 75%; }
 
@@ -8,6 +25,20 @@
         margin: auto;
     }
 
-  
+    #menu{
+        display: flex;
+        font-family: var(--fontTitle);
+        font-size: 0.8em;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    #menu li{
+        display: inline-block;
+        
+    }
+    
+    #menuIcon{display: none;}
     
 }
