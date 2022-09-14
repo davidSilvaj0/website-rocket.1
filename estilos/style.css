@@ -53,7 +53,6 @@ header > h1{
 }
 
 #menu {
-    display: none;
     font-family: var(--fontTitle), sans-serif;
     font-weight: normal;
     font-size: 1.1em;
@@ -65,20 +64,12 @@ header > h1{
 
 #menu li a {
     display: block;
+    position: relative;
     color: var(--cor02);
     padding: 10px;
     text-align: center;
     font-weight: bold;
     border-radius: 5px;
-    transition-duration: 0.5s;
-    position: relative;
-}
-
-#menuIcon{
-    display: block;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
 }
 
 /* ---------------------------------------------------------- */
@@ -116,13 +107,6 @@ section p{
     text-align: justify;
 }
 
-picture{
-    display: block;
-    text-align: center;
-}
-
-picture > img { width: 100%; }
-
 .verMais , #menuIcon{
     text-align: center;
     display: flex;
@@ -156,7 +140,6 @@ picture > img { width: 100%; }
   'GRAD' -25,
   'opsz' 48
 }
-
 
 #btnUp {
     position: fixed;
@@ -201,7 +184,5 @@ footer{
 
     font-family: var(--font01);
     font-size: 1.2em;
-
-    
     height: 150px;
 }
