@@ -20,6 +20,8 @@
 /* Telemovel */
 @media screen and (max-width:768px) {
 
+    #menu{display: none;}
+
     #menuIcon{
         display: block;
         text-align: center;
