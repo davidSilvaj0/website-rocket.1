@@ -15,18 +15,24 @@
 <body onresize="onchangeSize()">
     <header>
         <h1>Era Espacial</h1>
-        <span id="menuIcon" class="material-symbols-outlined" onclick="openMenu()">
-            arrow_drop_down_circle
-        </span>
 
-        <nav id="menu">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Foguetes</a></li>
-                <li><a href="#">Motores</a></li>
-                <li><a href="#">Sobre</a></li>
-            </ul>
-        </nav>
+        <div id="botao">
+            <button id="btn-mobile">
+                <!-- <span id="menuHamb"></span> -->
+                <span id="menuIcon" class="material-symbols-outlined" >
+                    arrow_drop_down_circle
+                </span>
+            </button>
+        </div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Foguetes</a></li>
+                    <li><a href="#">Motores</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+
     </header>
     <main>
         <section>
@@ -40,7 +46,7 @@
                 <hr>
                 <p>
                     O Space Shuttle era um veículo parcialmente reutilizável usado pela NASA para lançar satélites e outro tipo de cargas, servia para suas missões tripuladas de reparos de aparelhos em órbita no espaço e reabastecimento da Estação Espacial Internacional. Este tornou-se o sucessor do Saturn V, anteriormente usado nas missões apollo para a lua.
-                    Atualmente já aposentado, com total de 135 missões ao total.
+                    Atualmente já aposentado, com o total de 135 missões realizadas.
                 </p>
                 <a href="#" class="verMais">
                     <span class="material-symbols-outlined">
@@ -171,27 +177,55 @@
     
     <script>
         // função para abrir ou fechar o menu (smartphone)
-        function openMenu(){
-            if ( menu.style.display == 'block')
+
+        const btnMobile = document.getElementById('btn-mobile');
+
+        function toggleMenu()
+        {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+
+            const txtMenu = document.getElementById('menuIcon');
+
+            if(menu.classList =='active')
             {
-                menu.style.display= 'none';
+                txtMenu.innerHTML = 'close';
+                txtMenu.style.transition = '2s';
+                txtMenu.style.color = 'white';
             }
-            else
-            {
-                menu.style.display= 'block';
-            }   
+            else{
+                txtMenu.innerHTML = 'arrow_drop_down_circle'
+                txtMenu.style.transition = '2s';
+                txtMenu.style.color = '#9aa0a0';
+            }
+
         }
 
+        btnMobile.addEventListener('click', toggleMenu)
+
+
+
+        // function openMenu(){
+        //     if ( menu.style.display == 'block')
+        //     {
+        //         menu.style.display= 'none';
+        //     }
+        //     else
+        //     {
+        //         menu.style.display= 'block';
+        //     }   
+        // }
+
         // função para o menu nao desaparecer quando o resize muda
-        function onchangeSize(){
-            if(window.innerWidth>=768){
-                menu.style.display = "block";
-            }
+        // function onchangeSize(){
+        //     if(window.innerWidth>=768){
+        //         menu.style.display = "block";
+        //     }
             
-            else{
-                menu.style.display = "none";
-            }
-        }
+        //     else{
+        //         menu.style.display = "none";
+        //     }
+        // }
 
         // função do botão de dar scroll para o topo da página
         const buttonUP = document.querySelector("#btnUp");
