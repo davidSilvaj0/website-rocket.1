@@ -38,7 +38,7 @@
 
     /* Classe para quando está ativo */
     #menu.active  {
-        height: 250px;
+        height: 280px;
         visibility: visible;
     }
 
@@ -56,8 +56,6 @@
         text-align: center;
         padding: 10px;
         cursor: pointer;
-        
-        
     }
 
     #botao{
