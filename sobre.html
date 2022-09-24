@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body onload="getScroll()">
 
     <header>
         <h1>Era Espacial</h1>
@@ -40,7 +40,7 @@
         
         <section id="sobre">
             <div id="vid">
-                <video width="60%" height="100%" autoplay loop >
+                <video width="60%" height="100%" autoplay loop muted >
                     <source src="imagens/SolarsystemLoop.m4v" type="video/mp4" >
                 </video>
             </div>
@@ -66,81 +66,6 @@
             <!-- https://www.flickr.com/photos/nasamarshall/52177029653/ -->
         </span>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     
     <script>
@@ -168,8 +93,16 @@
             }
 
         }
-
         btnMobile.addEventListener('click', toggleMenu)
+
+        //metodo para mobile, inicia na imagem abaixo
+        function getScroll(){
+            if (window.innerWidth <=768)
+            {
+                window.scrollTo(0, 360);
+            }
+         }
+
 
     </script>
 
