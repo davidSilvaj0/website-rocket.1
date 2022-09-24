@@ -2,10 +2,12 @@
 
 @media screen and (max-width:768px){
     
+    #vid{padding-top: 10px;}
     #vid video {
         width: 100%;
-        padding-top: 10px;
     }
+
+
 }
 
 
