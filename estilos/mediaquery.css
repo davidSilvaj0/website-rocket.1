@@ -33,11 +33,12 @@
 
     #menu a{
         /* border-bottom: 1px solid rgba(255, 255, 255, 0.16); */
+        padding: 10px;
     }
 
     /* Classe para quando está ativo */
     #menu.active  {
-        height: 300px;
+        height: 250px;
         visibility: visible;
     }
 
