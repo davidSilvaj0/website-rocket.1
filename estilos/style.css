@@ -108,6 +108,8 @@ section p{
 }
 
 .verMais , #menuIcon{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -155,6 +157,9 @@ section p{
     transition: .5s;
     outline: black;
     border-color: black;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 #btnUp:hover{
