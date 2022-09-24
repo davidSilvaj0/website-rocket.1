@@ -36,6 +36,13 @@
     #menu a{
         /* border-bottom: 1px solid rgba(255, 255, 255, 0.16); */
         margin-top: 10px;
+        transition: 1s;
+    }
+    
+    #menu a:hover
+    {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(33, 55, 103, 0.75), rgba(105, 105, 105, 0));
+        transition: 1s;
     }
 
     /* Classe para quando está ativo */
