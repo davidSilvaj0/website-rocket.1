@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+
+    <style>
+    /* fontes e cores */
+        @charset "UTF-8";
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200&display=swap');
+        :root{
+
+            --cor01:#080F0F;
+            --cor02:#EEE5E9;
+            --cor03:#2E382E;
+            --cor04:#153B50;
+
+            --font01: 'Barlow Condensed';
+            --font02: 'Open Sans';
+            --font03: 'Roboto', sans-serif;
+            --font04: 'Quantico', sans-serif;
+            --font05: 'Silkscreen', cursive;
+            --font06: 'Oxanium', cursive;
+            --fontTitle: 'Bungee Hairline';
+            }
+
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        main{
+            background-color: #080F0F;
+            height: 100vh;
+        }
+
+        .container{
+            border: 1px solid rgb(63, 127, 238);
+            margin: auto;
+            height: 500px;
+            width: 90vw;
+            
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .rocket{
+            border: 0px solid rgb(255, 255, 255);
+            margin: 20px;
+            width: 350px;
+
+            border-radius: 5px;
+            cursor: pointer;
+
+            position: relative;
+
+     
+        }
+
+        .legenda{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            opacity: 0;
+            background-color: #0617208d;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .9s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rocket:hover .legenda{
+            height: 100%;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+
+            opacity: 1;
+        }
+
+        .legenda h3{
+            font-family: var(--font05);
+            color: var(--cor02);
+            text-shadow: 2px 2px 1px black;
+            
+        }
+
+        #falcon{
+            background: url(../imagens/falcon9/falcon9-g2.jpg) center no-repeat scroll;
+            background-size: cover;
+        
+        }
+        
+
+
+     
+      
+    </style>
+</head>
+<body>
+    <main>
+
+        <section class="container">
+            <div class="rocket" id="falcon">
+                <div class="legenda">
+                    <h3>Space Shuttle</h3>
+                </div>
+            </div>
+            
+             <div class="rocket" id="falcon">
+                <div class="legenda">
+                    <h3>Falcon 9</h3>
+                </div>
+            </div>
+<!--
+
+            <div class="rocket" id="sls">
+                <div class="legenda">
+                    <h3>SLS</h3>
+                </div>
+            </div> -->
+        </section>
+
+    </main>
+</body>
+</html>

@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200&display=swap');
 :root{
 
     --cor01:#080F0F;
@@ -13,6 +16,9 @@
     --font01: 'Barlow Condensed';
     --font02: 'Open Sans';
     --font03: 'Roboto', sans-serif;
+    --font04: 'Quantico', sans-serif;
+    --font05: 'Silkscreen', cursive;
+    --font06: 'Oxanium', cursive;
     --fontTitle: 'Bungee Hairline';
 }
 
