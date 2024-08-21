@@ -1,0 +1,162 @@
+@import url(style.css);
+
+*{
+    box-sizing: border-box;
+}
+
+main,body{
+    background-color: #080F0F;
+    height: 100vh;
+}
+    /* Configs Gerais */
+        .container{
+            margin: auto;
+        
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            height: auto;
+
+            /* border : 1px solid rgb(255, 0, 0); */
+ 
+        }
+
+        .rocket{
+            /* border: 1px solid rgb(159, 255, 6); */
+            margin: 20px;
+            max-width: 400px;
+            /* flex: 1 0 10%;  */
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            height: 450px;
+        }
+
+        .legenda{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            opacity: 0;
+            background-color: #0617208d;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .9s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rocket:hover .legenda{
+            height: 100%;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+
+            opacity: 1;
+        }
+
+        .legenda h3{
+            font-family: var(--font05);
+            color: var(--cor02);
+            text-shadow: 2px 2px 1px black;
+            
+        }
+
+
+        /* MediaQuery */
+        /* Para telemóvel */
+        @media screen and (max-width: 768px) {
+            .container{
+                display: flex;
+                flex-direction: column;
+                width: 90vw;
+                /* height: 2000px; */
+                align-items: center;
+            }
+
+            .rocket{
+                margin: 20px 0px;
+                /* border: 1px green solid; */
+                /* height: 700px; */
+                width: 380px;
+            }
+        }
+
+        /* Para tablet */
+        @media screen and (min-width:768px) and (max-width:1300px) {
+            .container{
+                margin: auto;
+                height: auto;
+                width: 90vw;
+                /* border: 1px yellow dashed; */
+                
+                display: flex;
+                flex-wrap: wrap;
+
+                
+                justify-content: center;
+            }
+            .rocket{
+                height: 500px;
+                max-width: 400px;
+                flex: 1 0 30%;
+            }
+
+
+        }
+
+        /* Para Desktop */
+        @media screen and (min-width: 1300px) {
+            
+            .container{
+                
+                margin: auto;
+                height: 500px;
+                width: 90vw;
+                
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .rocket{
+               flex: 1 0 10%; 
+            }
+        }
+
+
+       
+
+
+/* Imagens para as divs com os respetivos foguetes */
+    #falcon{
+        background: url(../imagens/falcon9/falcon9-g2.jpg) center no-repeat scroll;
+        background-size: cover;
+    }
+
+    #shuttle{
+        background: url(../imagens/shuttle/shuttle-p.jpg) center no-repeat scroll;
+        background-size: cover;
+    }
+
+    #sls{
+        background: url(../imagens/sls/sls-m.jpg) center no-repeat scroll;
+        background-size: cover;
+    }
+
+    #starship{
+        background: url(../imagens/starship/starship-m.jpg) center no-repeat scroll;
+        background-size: cover;
+    }
+
+    #deltaiv{
+        background: url(../imagens/delta-iv-heavy/delta-iv-heavy-m.jpg) center no-repeat scroll;
+        background-size: cover;
+    }
+

@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200&display=swap');
+:root{
+
+    --cor01:#080F0F;
+    --cor02:#EEE5E9;
+    --cor03:#2E382E;
+    --cor04:#153B50;
+
+    --font01: 'Barlow Condensed';
+    --font02: 'Open Sans';
+    --font03: 'Roboto', sans-serif;
+    --font04: 'Quantico', sans-serif;
+    --font05: 'Silkscreen', cursive;
+    --font06: 'Oxanium', cursive;
+    --fontTitle: 'Bungee Hairline';
+}
+
+/* Telemovel */
+@media screen and (max-width:768px) {
+
+
+    #menu{
+        display: block;
+        width: 100%;
+        height: 0px;
+        text-align: center;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #menu a{
+        /* border-bottom: 1px solid rgba(255, 255, 255, 0.16); */
+        margin-top: 10px;
+        transition: 2s;
+        background-size: 300%;
+        background-position: 100%;
+    }
+    
+    #menu a:hover
+    {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(33, 55, 103, 0.75), rgba(105, 105, 105, 0));
+        transition: 1s;
+        background-position: center;
+    }
+
+    /* Classe para quando está ativo */
+    #menu.active  {
+        height: 280px;
+        visibility: visible;
+    }
+
+    #btn-mobile, #btn-engine{
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
+        text-align: center;
+        border: none;
+        padding: .5rem 1rem;
+        background: none;
+        cursor: pointer;
+        color: white;
+    }
+    
+
+    #menuIcon{
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #botao{
+        display: flex;
+        justify-content: center;
+    }
+    
+    picture > img { width: 100%; }
+
+
+}
+
+
+/* Tablet e Desktop */
+@media screen and (min-width:768px) {
+    picture > img { width: 75%; }
+
+    section p { 
+        width: 75%;
+        margin: auto;
+    }
+
+    #menu{
+        display: flex;
+        font-family: var(--fontTitle);
+        font-size: 0.8em;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    #btn-mobile{display: none;}
+
+    /* Animação underline no menu */
+        #menu li a::before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--cor02);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        #menu li a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    
+    #menu li{
+        display: inline-block;
+    }
+    
+    #menuIcon{display: none;}
+    
+    picture{
+        display: block;
+        text-align: center;
+    }
+}

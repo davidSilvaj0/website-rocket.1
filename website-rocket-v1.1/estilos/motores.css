@@ -1,0 +1,144 @@
+@import url(style.css);
+:root{
+
+    --cor01:#080F0F;
+    --cor02:#EEE5E9;
+    --cor03:#2E382E;
+    --cor04:#153B50;
+
+    --font01: 'Barlow Condensed';
+    --font02: 'Open Sans';
+    --font03: 'Roboto', sans-serif;
+    --font04: 'Quantico', sans-serif;
+    --font05: 'Silkscreen', cursive;
+    --font06: 'Oxanium', cursive;
+    --fontTitle: 'Bungee Hairline';
+}
+
+main,body{
+    background-color: #080F0F;
+    height: 100vh;
+}
+
+/* Main */
+
+    /* Configurações Gerais */
+        .motor{
+            height: 460px !important;
+            border-radius: 10px;
+        }
+
+        h2, p{
+            color: #FFF;
+        }
+
+
+    /* Para telemóvel */
+        @media screen and (max-width: 768px) {
+            
+            .container{
+                
+                padding: 3%;
+                /* border: 1px solid yellow; */
+                margin: auto;
+                margin-bottom: 40px;
+                background-color: #060d15;
+                width: 90vw;
+                box-shadow: 0px 3px 8px 1px #4c949c2e;
+                border-radius: 3px;
+            }
+
+            .legend{
+                text-align: center;
+            }
+
+            #info {
+                display: none;
+                overflow: hidden;
+            }
+
+            .info{
+                display: none;
+            }
+
+            .active{
+                display: block !important;
+            }
+
+            .btn-engine.active #arrow_drop {
+                transition: ease-in 1s;
+            }
+    
+            .btn-engine.off #arrow_drop {
+                transition: ease-in 1s;
+            }
+
+            .btn-engine{
+                display:none;
+                text-align: center;
+                margin: auto;
+                background-color: transparent;
+                color: white;
+                border: none;
+                cursor:pointer;
+            }
+
+            hr{
+                width: 70%;
+            }
+
+            .info {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out;
+            }
+            .info.show {
+                max-height: 1000px; /* Arbitrary large value to ensure the content fits */
+                transition: max-height 0.5s ease-in;
+            }
+        }
+
+    /* Para Computador */
+        @media screen and (min-width: 1300px) {
+            
+            .container{
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            
+            .motor{ min-width: 40%;}
+            .legend{ min-width: 60%;}
+            
+            .sep{margin-top: 150px; margin-bottom: 150px;}
+
+            .legend > hr{width: 50vw;}
+
+            .invert{
+                flex-direction: row-reverse;
+            }
+
+            .btn-engine{display: none;}
+
+        }
+
+
+/* Imagens Motores */
+#raptor{
+    background: url(../imagens/motores/raptor.png) center no-repeat scroll;
+    background-size: contain;
+    width: 100%;
+}
+
+#BE-4{
+    background: url(../imagens/motores/BE4.png) center no-repeat scroll;
+    background-size: contain;
+    width: 100%;
+}
+
+#merlin{
+    background: url(../imagens/motores/merlin-1D.jpg) center no-repeat scroll;
+    background-size: contain;
+    width: 100%;
+}

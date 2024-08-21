@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motores</title>
+    <!-- <link rel="stylesheet" href="estilos/style.css"> -->
+    <link rel="stylesheet" href="estilos/motores.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <link rel="shortcut icon" href="imagens/shuttleIcon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Era Espacial</h1>
+
+        <div id="botao">
+            <button id="btn-mobile">
+                <!-- <span id="menuHamb"></span> -->
+                <span id="menuIcon" class="material-symbols-outlined">
+                    arrow_drop_down_circle
+                </span>
+            </button>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="foguetes.html">Foguetes</a></li>
+                <li><a href="motores.html">Motores</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+    <section>
+
+        <h2>Motores</h2>
+
+        <div class="container">
+            <div class="motor" id="raptor"></div>
+            <div class="legend">
+                <h2>Raptor</h2>
+                <hr>
+                <button class="btn-engine" onclick="openBox(this)">
+                    <span id="arrow_drop" class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </button>
+                <p id="info">The Raptor engine is a reusable methane-oxygen staged-combustion engine that powers the
+                    Starship system and has twice the thrust of the Falcon 9 Merlin engine. Starship will be powered by
+                    six engines, three Raptor engines, and three Raptor Vacuum (RVac) engines, which are designed for
+                    use in the vacuum of space. Super Heavy will be powered by 33 Raptor engines, with 13 in the center
+                    and the remaining 20 around the perimeter of the booster’s aft end.</p>
+            </div>
+        </div>
+        <hr class="sep">
+        <div class="container invert">
+            <div class="motor" id="BE-4"></div>
+            <div class="legend">
+                <h2>BE-4</h2>
+                <hr>
+                <button class="btn-engine" onclick="openBox(this)">
+                    <span id="arrow_drop" class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </button>
+                <p id="info" class="info">The Raptor engine is a reusable methane-oxygen staged-combustion engine that powers the
+                    Starship system and has twice the thrust of the Falcon 9 Merlin engine. Starship will be powered by
+                    six engines, three Raptor engines, and three Raptor Vacuum (RVac) engines, which are designed for
+                    use in the vacuum of space. Super Heavy will be powered by 33 Raptor engines, with 13 in the center
+                    and the remaining 20 around the perimeter of the booster’s aft end.</p>
+            </div>
+        </div>
+        <hr class="sep">
+        <div class="container">
+            <div class="motor" id="merlin"></div>
+            <div class="legend">
+                <h2>Merlin 1D</h2>
+                <hr>
+                <button class="btn-engine" onclick="openBox(this)">
+                    <span id="arrow_drop" class="material-symbols-outlined" >
+                            expand_more
+                    </span>
+                </button>
+                <p id="info" class="info">Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9
+                    and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid
+                    oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally
+                    designed for recovery and reuse.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer>
+        <p>Site criado por David Silva</p>
+        <span>
+            <a href="https://github.com/davidSilvaj0" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/270/270798.png" alt="GitHub" width="50px"
+                    height="50px">
+            </a>
+            <!-- https://www.flickr.com/photos/nasamarshall/52177029653/ -->
+        </span>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // função para abrir ou fechar o menu (smartphone)
+
+        const btnMobile = document.getElementById('btn-mobile');
+        // const btnEngine = document.getElementById('btn-engine');
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+
+            const txtMenu = document.getElementById('menuIcon');
+
+            if (menu.classList == 'active') {
+                txtMenu.innerHTML = 'close';
+                txtMenu.style.transition = '2s';
+                txtMenu.style.color = 'white';
+            }
+            else {
+                txtMenu.innerHTML = 'arrow_drop_down_circle'
+                txtMenu.style.transition = '2s';
+                txtMenu.style.color = '#9aa0a0';
+            }
+
+        }
+
+        function openBox(button) {
+            const legend = button.nextElementSibling;
+            const txtMenu = button.querySelector(".material-symbols-outlined");
+
+            if (button.classList.contains('active')) {
+                button.classList.remove('active');
+                button.classList.add('off');
+                txtMenu.innerHTML = 'expand_less';
+                legend.classList.add('show');
+            } else {
+                button.classList.remove('off');
+                button.classList.add('active');
+                txtMenu.innerHTML = 'expand_more';
+                legend.classList.remove('show');
+            }
+        }
+        // function openBox() {
+        //     const legend = document.getElementById("info");
+        //     const btn = document.querySelector(".btn-engine");
+        //     const txtMenu = document.getElementById("arrow_drop");
+
+        //     if (btn.classList.contains('active')) {
+        //         btn.classList.remove('active');
+        //         btn.classList.add('off');
+        //         txtMenu.innerHTML = 'expand_less';
+        //         legend.style.display = 'block';
+        //     } else {
+        //         btn.classList.remove('off');
+        //         btn.classList.add('active');
+        //         txtMenu.innerHTML = 'expand_more';
+        //         legend.style.display = 'none';
+        //     }
+        // }
+
+
+        btnMobile.addEventListener('click', toggleMenu)
+        // btnEngine.addEventListener('click', toggleMenu)
+
+
+        // function openMenu(){
+        //     if ( menu.style.display == 'block')
+        //     {
+        //         menu.style.display= 'none';
+        //     }
+        //     else
+        //     {
+        //         menu.style.display= 'block';
+        //     }   
+        // }
+
+        // função para o menu nao desaparecer quando o resize muda
+        // function onchangeSize(){
+        //     if(window.innerWidth>=768){
+        //         menu.style.display = "block";
+        //     }
+
+        //     else{
+        //         menu.style.display = "none";
+        //     }
+        // }
+
+        // função do botão de dar scroll para o topo da página
+//         const buttonUP = document.querySelector("#btnUp");
+//         buttonUP.addEventListener("click", function () {
+//   window.scrollTo({
+//                 top: 0,
+//                 left: 0,
+//                 behavior: "smooth"
+//             })
+//         });
+    </script>
+</body>
+
+</html>
